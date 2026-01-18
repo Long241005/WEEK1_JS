@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai3_part1</title>
+</head>
+
+<body>
+    <h3>Dolphins</h3>
+    <input id="d1" type="number" value="" placeholder="Score 1">
+    <input id="d2" type="number" value="" placeholder="Score 2">
+    <input id="d3" type="number" value="" placeholder="Score 3">
+
+    <h3>Koalas</h3>
+    <input id="k1" type="number" value="" placeholder="Score 1">
+    <input id="k2" type="number" value="" placeholder="Score 2">
+    <input id="k3" type="number" value="" placeholder="Score 3">
+    <button id="cacul">Tính</button>
+    <script>
+        document.getElementById("cacul").addEventListener("click", function () {
+            let d1 = +document.getElementById("d1").value;//96 97 
+            let d2 = +document.getElementById("d2").value;//108 112 
+            let d3 = +document.getElementById("d3").value;//89 101
+
+            let k1 = +document.getElementById("k1").value;//88 109
+            let k2 = +document.getElementById("k2").value;//91 95
+            let k3 = +document.getElementById("k3").value;//110 123
+            let avDolphins = (d1 + d2 + d3) / 3;
+            let avKoalas = (k1 + k2 + k3) / 3;
+            console.log(avDolphins);
+            console.log(avKoalas);
+            if (avDolphins > avKoalas && avDolphins >= 100) {
+                console.log("Dolphins thắng cúp");
+            } else if (avKoalas > avDolphins && avKoalas >= 100) {
+                console.log("Koalas thắng cúp");
+            } else if (avDolphins === avKoalas && avDolphins >= 100) {
+                console.log("Hòa! Cả hai cùng thắng");
+            } else {
+                console.log("Không có đội nào đủ 100 điểm để thắng cúp");
+                if (avDolphins > avKoalas) {
+                    console.log(`Tuy nhiên, Dolphins (${avDolphins.toFixed(1)}) có điểm cao hơn Koalas (${avKoalas.toFixed(1)})`);
+                } else if (avKoalas > avDolphins) {
+                    console.log(`Tuy nhiên, Koalas (${avKoalas.toFixed(1)}) có điểm cao hơn Dolphins (${avDolphins.toFixed(1)})`);
+                } else {
+                    console.log("Cả hai đội bằng điểm nhau nhưng đều dưới 100 điểm.");
+                }
+            }
+
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

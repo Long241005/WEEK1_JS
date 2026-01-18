@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai1_part1</title>
+</head>
+
+<body>
+    <div>MARK'S</div>
+    <input id="Mmass" type="text" value="78">
+    <input id="Mheight" type="text" value="1.69">
+    <div>JOHN</div>
+    <input id="Jmass" type="text" value="95">
+    <input id="Jheight" type="text" value="1.88">
+    <script>
+        let Mmass = document.getElementById("Mmass").value;
+        let Mheight = document.getElementById("Mheight").value;
+        let Jmass = document.getElementById("Jmass").value;
+        let Jheight = document.getElementById("Jheight").value;
+        let MBMI = Mmass / Mheight ** 2;
+        let JBMI = Jmass / Jheight ** 2;
+        let markHigherBMI = MBMI > JBMI;
+
+        console.log(MBMI);
+        console.log(JBMI);
+        if (markHigherBMI) {
+            console.log("true")
+        } else {
+            console.log("false")
+        }
+
+    </script>
+</body>
+
+</html>

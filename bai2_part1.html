@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai2_part1</title>
+</head>
+
+<body>
+    <div>MARK</div>
+    <input id="Mmass" type="number" value="">
+    <input id="Mheight" type="number" value="">
+    <div>JOHN</div>
+    <input id="Jmass" type="number" value="">
+    <input id="Jheight" type="number" value="">
+    <button id="click">click</button>
+    <script>
+        document.getElementById("click").addEventListener("click", function () {
+            let Mmass = document.getElementById("Mmass").value;
+            let Mheight = document.getElementById("Mheight").value;
+            let Jmass = document.getElementById("Jmass").value;
+            let Jheight = document.getElementById("Jheight").value;
+            let MBMI = Mmass / Mheight ** 2;
+            let JBMI = Jmass / Jheight ** 2;
+
+            console.log(MBMI);
+            console.log(JBMI);
+
+            let bool = MBMI > JBMI;
+            if (bool) {
+                console.log(`Chỉ số BMI của Mark(${MBMI.toFixed(1)}) cao hơn chỉ số BMI của John(${JBMI.toFixed(1)})`)
+            } else {
+                console.log(`chỉ số BMI của John(${JBMI.toFixed(1)}) cao hơn Chỉ số BMI của Mark(${MBMI.toFixed(1)})`)
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>
