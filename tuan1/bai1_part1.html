@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
@@ -14,23 +14,25 @@
     <div>JOHN</div>
     <input id="Jmass" type="text" value="95">
     <input id="Jheight" type="text" value="1.88">
+
     <script>
-        let Mmass = document.getElementById("Mmass").value;
-        let Mheight = document.getElementById("Mheight").value;
-        let Jmass = document.getElementById("Jmass").value;
-        let Jheight = document.getElementById("Jheight").value;
+        let Mmass = parseFloat(document.getElementById("Mmass").value);
+        let Mheight = parseFloat(document.getElementById("Mheight").value);
+        let Jmass = parseFloat(document.getElementById("Jmass").value);
+        let Jheight = parseFloat(document.getElementById("Jheight").value);
+
         let MBMI = Mmass / Mheight ** 2;
         let JBMI = Jmass / Jheight ** 2;
         let markHigherBMI = MBMI > JBMI;
 
-        console.log(MBMI);
-        console.log(JBMI);
-        if (markHigherBMI) {
-            console.log("true")
-        } else {
-            console.log("false")
-        }
+        console.log("BMI của Mark: " + MBMI.toFixed(2));
+        console.log("BMI của John: " + JBMI.toFixed(2));
 
+        if (markHigherBMI) {
+            console.log("Mark có BMI cao hơn John: đúng");
+        } else {
+            console.log("Mark có BMI cao hơn John: sai");
+        }
     </script>
 </body>
 
