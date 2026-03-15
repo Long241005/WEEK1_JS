@@ -5,6 +5,7 @@ import Bai4 from './tuan3/bai4'
 import Bai5 from './tuan3/bai5' 
 import Bai6 from './tuan3/bai6' 
 import Bai7 from './tuan3/bai7' 
+import Bai1T4 from './tuan4/bai1'
 import './App.css'
 
 function App() {
@@ -23,7 +24,9 @@ function App() {
        <hr />
        <Bai6 /> 
        <hr />
-       <Bai7 /> 
+       <Bai7 />
+       <hr/>
+       <Bai1T4 /> 
        </div>
   )
 }
